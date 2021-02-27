@@ -8,6 +8,10 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.get('/', (req, res) => {
+    res.send('Aplicacao Online!')
+})
+
 app.post('/custom/cpfSearch', async(req, res) => {
     var cpf = req.body.cpf
 
